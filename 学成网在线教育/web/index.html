@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		/*样式*/
+		/*css初始化*/
+		* {
+			margin:0;
+			padding:0;
+		}
+		ul {
+			list-style: none;
+		}
+		/*清除浮动*/
+		.clearfix:before,.clearfix:after {
+			display: table;
+			content:"";
+		}
+		.clearfix:after {
+			clear:both;
+		}
+		.clearfix {
+			*zoom:1;
+		}
+		/*所有的表单边框为0*/
+		/*css3盒子模型border和padding都包含到width里去*/
+		input {
+			border: 0; 
+			box-sizing: border-box;
+		}
+		/*我们的版心宽度都是1200 都要居中对齐*/
+		.container {
+			width:1200px;
+			margin:0 auto;
+		}
+		/*css初始化结束*/
+		/*页面头部分*/
+		body {
+			background-color: #f3f5f7; 
+		}
+		header {
+			height: 96px;
+			/*background-color: skyblue;*/
+			overflow: hidden;
+		}
+		nav {
+			width: 1312px;  /*宽度暂且定为1336px*/
+			height: 42px;
+			/*background-color: white;*/
+			margin: 25px auto;
+		}
+		.logo {
+			float:left;
+			margin-right: 78px;
+		}
+		.navbar {
+			float: left;
+			height: 42px;
+		}
+		.navbar li {
+			float: left;
+			line-height: 42px;
+		}
+	    .navbar li a {
+	    	text-decoration: none;
+			color: #050505;
+			font-weight: 18px;
+			padding:0 10px;  /*使用padding设置宽度*/
+	    }
+	    a:hover {
+	    	border-bottom: 1px solid blue;
+	    }
+	    .search {
+	    	height:38px;
+	    	width: 410px;
+	    	border:1px solid #00a4ff;
+	    	float: left;
+	    	margin-left: 86px;
+	    }
+	    .search input[type='text'] {
+	    	width:360px;
+	    	height:36px;
+	    	float: left;
+	    }
+		.search input[type='submit'] {
+			width:50px;
+			height:38px;
+			float: left;
+			background:#00a4ff url(images/search_03.png) no-repeat center;
+		}
+		.person {
+			height: 38px;
+			width:264px;
+			/*background-color: pink;*/
+			float:left;
+			margin-left: 32px;
+		}
+		.person a {
+			text-decoration: none;
+			font-color:#050505;
+			display: inline-block;
+			line-height: 38px;
+			float: left;
+			margin-right: 15px;
+		}
+		.person img {
+            float: left;
+            margin-right: 15px;
+		}
+		/*banner开始*/
+		.banner {
+			height: 420px;
+			background-color: #1c036c;
+		}
+		.banner-in {
+			height: 420px;
+			background-image: url(images/banner_03.png);
+		}
+		.slidebar {
+			width: 185px;
+			height: 420px;
+			background-color: rgba(0,0,0,0.4);
+		}
+		.slidebar ul li a{
+			color:white;
+			text-decoration: none;
+			font-size: 16px;
+			padding: 0 20px;
+			/*a是行内元素,没有大小需要转换*/
+			display: block;
+			height: 46px;
+			line-height: 46px;
+		}
+		.slidebar a span {
+            float: right;
+            /*一般符号用arial字体*/
+            font-family: arial;
+		}
+		.slidebar a:hover {
+			color: #00a4ff;
+			text-decoration: none;
+		}
+ 	</style>
+</head>
+<body>
+	<!-- 结构 -->
+	<!-- 版心 width:1200px heigh:418px-->
+	<!-- 页面头部分 -->
+	<header>
+		<nav>
+			<!-- logo部分 -->
+			<div class="logo">
+				<img src="images/logo_03.png" style="height: 42px;background-color: #f3f5f7" />
+			</div>
+			<!-- 导航栏部分 -->
+			<div class="navbar">
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li><a href="#">课程</a></li>
+					<li><a href="#">职业规划</a></li>
+				</ul>
+			</div>
+			<!-- 搜索框部分 -->
+			<div class="search">
+				<!-- 行内块标签在一行上会有空隙 float可去除-->
+				<input type="text" placeholder="输入关键词" />
+				<input type="submit" value=""/>
+			</div>
+			<!-- 个人中心部分 -->
+			<div class="person">
+				<a href="#">个人中心</a>
+				<img src="images/bell_03.png" />
+				<img src="images/profile_03.png" />
+				<a href="#">admin</a>
+			</div>
+		</nav>
+	</header>
+	<!-- banner部分 -->
+	<div class="banner">
+		<div class="banner-in container">
+			<!-- 左侧导航栏 -->
+			<div class="slidebar">
+				<ul>
+					<li><a href="#">前端开发  <span> >  </span> </a></li>
+					<li><a href="#">后端开发  <span> >  </span> </a></li>
+					<li><a href="#">移动开发  <span> >  </span> </a></li>
+					<li><a href="#">人工智能  <span> >  </span> </a></li>
+					<li><a href="#">商业预测  <span> >  </span> </a></li>
+					<li><a href="#">云计算&大数据  <span> >  </span> </a></li>
+					<li><a href="#">运维&测试  <span> >  </span> </a></li>
+					<li><a href="#">UI设计  <span> >  </span> </a></li>
+					<li><a href="#">产品  <span> >  </span> </a></li>
+				</ul>
+			</div>
+			<!-- 小课表部分 -->
+			<dl class="timetable">
+				<dt>我的课程表</dt>
+				<dd></dd>
+				<dd></dd>
+				<dd></dd>
+				<dd></dd>
+			</dl>
+		</div>
+	</div>
+</body>
+</html>
