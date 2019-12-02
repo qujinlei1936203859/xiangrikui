@@ -4,6 +4,10 @@
 	margin:0;
 	padding:0;
 }
+/*body添加高度 方便查看效果*/
+/*body {
+	height: 3000px;
+}*/
 ul {
 	list-style: none;
 }
@@ -15,6 +19,7 @@ ul {
 .clearfix:after {
 	clear:both;
 }
+/*zoom就是ie6.7清除浮动的方法*/
 .clearfix {
 	*zoom:1;
 }
@@ -111,6 +116,7 @@ a:hover {
 .banner-in {
 	height: 420px;
 	background-image: url(images/banner_03.png);
+	position: relative;
 }
 .slidebar {
 	width: 185px;
@@ -145,7 +151,7 @@ a:hover {
 	background-color: #fff;
 	margin-top: 50px;
 }
-dl dt {
+.timetable dt {
 	height: 45px;
 	background-color:#9bceea;
 	text-align: center;
@@ -154,7 +160,7 @@ dl dt {
 	font-size: 20px;
 	margin-bottom: 10px;
 }
-dl dd {
+.timetable dd {
 	height: 60px;
 	width: 190px;
 	background-color: #fff;
@@ -163,20 +169,20 @@ dl dd {
 	box-sizing: border-box;
 	padding-top: 12px;
 }
-dd h4 {
+.timetable dd h4 {
 	font-size: 16px;
 	/*让粗体不变粗*/
 	font-weight: normal;
 	color: #5f5f5f;
 }
-dd p {
+.timetable dd p {
 	color: #acacac;
 	font-size: 12px;
 }
-dl dd:last-child {
+.timetable dd:last-child {
 	border-bottom:0;
 }
-dd a {
+.timetable dd a {
 	width:197px;
 	height: 38px;
 	border:1px solid #5f5f5f;
@@ -188,11 +194,37 @@ dd a {
 	font-weight: 700;
 	color: #5f5f5f;
 }
-dd a:hover {
+.timetable dd a:hover {
 	color: #00a4ff;
 	border:1px solid #00a4ff;
 	background-color: #9bceea;
 }
+.circle {
+	width: 180px;
+	height: 24px;
+	/*background-color: pink;*/
+	position:absolute;
+	bottom: 10px;
+    left: 50%;
+    margin-left: -90px;
+}
+.circle li{
+	float:left;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background-color: rgba(255,255,255,.4);
+	margin:6px 8px;
+}
+/*权重层叠掉*/
+.circle .current {
+	width: 20px;
+	border-radius: 6px;
+	background-color: #fff;
+}
+/*banner 结束*/
+
+/*精品推荐模块 开始*/
 .recommend {
 	height: 62px;
 	line-height: 62px;
@@ -218,3 +250,117 @@ dd a:hover {
 	color: #00a4ff;
 	float:right;
 }
+.recom-products {
+	margin-top: 18px;
+}
+.recom-hd {
+	height: 62px;
+	/*background-color: pink;*/
+}
+.recom-hd h4{
+	font-weight: normal;
+	float: left;
+	font-size: 22px;
+}
+.recom-hd a{
+	text-decoration: none;
+	float: right;
+	color: #a5a5a5;
+	font-size:14px;
+	margin-right: 30px;
+}
+.recom-hd a {
+	color:#00a4ff;
+}
+.recom-bd ul li{
+	width: 230px;
+	height: 270px;
+	background-color: #fff;
+	box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+	float: left;
+	margin-right:12px; 
+	margin-top: 12px;
+}
+/*n从0开始算*/
+.recom-bd li:nth-child(5n) {
+	margin-right: 0;
+}
+.recom-bd li h5,
+.recom-bd li p {
+	margin: 0 20px 0 24px;
+	margin-top:12px;
+	font-size: 12px;
+	color: #999999; 
+}
+.recom-bd li h5 {
+	/*行高*/
+	line-height: 22px;
+	font-weight: normal;
+	font-size: 14px;
+	color: #050505;
+}
+.recom-bd p span {
+	color: orange;
+}
+/*页面底部分*/
+footer {
+	height: 270px;
+	background-color: #fff;	
+	margin-top: 98px;
+}
+.footer-in {
+	padding-top:32px; 
+}
+.footer-l {
+	float:left;
+}
+.footer-l p {
+	font-size: 12px;
+	line-height: 18px;
+	margin-top:20px;
+}
+.footer-l p:last-child {
+	margin-top:0;
+}
+.footer-l img {
+	width: 196px;
+	height: 42px;
+}
+.footer-l a {
+	text-decoration: none;
+	width: 118px;
+	height: 32px;
+	border:1px solid #00a4ff;
+	color: #00a4ff;
+	margin-top: 20px;
+	display: block;
+	line-height: 32px;
+	text-align: center;
+}
+/*文字默认左上角对齐*/
+ /*使用高度剩余法*/
+.footer-r{
+	float:right;
+	color:#333;
+} 
+.footer-r dl{
+	float: left;
+	width: 224px;
+}
+/*使用高度剩余法更简单*/
+/*.footer-r dl:nth-child(2){
+	margin-left: 136px;
+	margin-right: 136px;
+}*/
+.footer-r dt{
+	font-size: 16px;
+	height: 30px;
+}
+.footer-r dd{
+	height: 20px;
+	font-size: 12px;
+}
+.footer-r dd a:hover{
+	color:skyblue;
+	text-decoration: none;
+} 
