@@ -107,6 +107,7 @@ a:hover {
 .person img {
     float: left;
     margin-right: 15px;
+    vertical-align: middle;
 }
 /*banner开始*/
 .banner {
