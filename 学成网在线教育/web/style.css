@@ -194,6 +194,7 @@ a:hover {
 	/*加粗,不要加px*/
 	font-weight: 700;
 	color: #5f5f5f;
+	transition: background-color 0.3;
 }
 .timetable dd a:hover {
 	color: #00a4ff;
@@ -277,10 +278,14 @@ a:hover {
 	width: 230px;
 	height: 270px;
 	background-color: #fff;
-	box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
 	float: left;
 	margin-right:12px; 
 	margin-top: 12px;
+	transition:all 0.5s;
+}
+.recom-bd ul li:hover{
+	margin-top: 6px;
+	box-shadow: 0 1px 1px 1px rgba(0,0,0,0.1);
 }
 /*n从0开始算*/
 .recom-bd li:nth-child(5n) {
