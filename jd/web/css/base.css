@@ -1,6 +1,12 @@
 /*
    版心宽度1190px
 */
+img {
+	/*该解决办法容易导致盒子掉落*/
+	/*display: block;*/
+	/*解决图片等行内块元素底侧有空白缝隙的问题*/
+	vertical-align: top;
+}
 .w {
 	width: 1190px;
 	margin:0 auto;

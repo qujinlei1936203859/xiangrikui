@@ -1,0 +1,243 @@
+/*中间分类模开始*/
+.grid {
+	height: 480px;
+	background-color: #fff;
+}
+.grid_col1{
+	width: 190px;
+	height: 100%;
+	background-color: #6E6568;
+	position: relative;
+}
+.ad {
+	width: 250px;
+	height: 480px;
+/*	background-color: pink;*/
+	position: absolute;
+	top: 0;
+	left: -250px;
+}
+.ad_r{
+	position: absolute;
+	top:0;
+	left: 250px;
+	z-index: 999;
+	width: 0;
+	height: 480px;
+	transition: all 0.3s;
+}
+.ad:hover .ad_r{
+	width: 990px;
+}
+.grid_col1 ul {
+	padding: 10px 0;
+	color: #fff;
+	font-size: 16px;
+}
+.grid_col1 ul li {
+	line-height: 27px;
+	padding-left: 12px;
+}
+.grid_col1 ul li:hover {
+	background-color: #d9d9d9;
+}
+.grid_col1 a {
+	color: #fff;
+}
+.grid_col1 a:hover {
+	color: #c81623;
+}
+.grid_col1 span {
+	margin:0 4px;
+}
+.grid_col2{
+	width: 790px;
+	height: 100%;
+	margin-left:10px;
+	/*background-color: skyblue;*/
+}
+/*banner部分*/
+.grid_col2_b div{
+	margin-top: 10px;
+}
+.grid_col2_t {
+	position: relative;
+}
+/*箭头部分*/
+.arrow_l,
+.arrow_r {
+	/*绝对定位和固定定位 浮动的盒子不需要模式转换*/
+	/*直接给宽高*/
+	position: absolute;
+	width: 30px;
+	height: 60px;
+	top: 50%;
+	background-color: rgba(255,255,255,.5);
+	transform: translateY(-50%);
+	text-align: center;
+	line-height: 60px;
+	color: white;
+	font-weight: bold;
+	font-size: 14px;
+}
+.arrow_l {
+	left: 0;
+}
+.arrow_r {
+	right: 0;
+}
+.grid_col2_t .circle {
+	padding:0 4px; 
+	width: 182px;
+	height: 20px;
+	background: rgba(225,225,225,.6);
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 20px;
+	border-radius: 10px;
+}
+.circle li {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	float: left;
+	background-color: #fff;
+	margin: 4px 5px;
+	/*鼠标经过li变小手*/
+	cursor: pointer;
+}
+.circle li:hover {
+	background-color: #DB192A;
+}
+.circle .current {
+	background-color: #DB192A;
+}
+.grid_col3{
+	width: 190px;
+	height: 100%;
+	background-color: #fff;
+}
+/*登录模块*/
+.grid_col3 .login{
+	height: 114px;
+	border-bottom: 1px solid #ccc;
+	padding: 15px;
+	box-sizing: border-box;
+} 
+.login .login_t{
+	height: 60px;
+	width: 100px;
+	font-size: 12px;
+	line-height: 20px;
+	/*强制一行内显示*/
+	white-space: nowrap;
+	/*溢出隐藏*/
+	overflow: hidden;
+	/*超出部分显示省略号*/
+	text-overflow: ellipsis;
+	color: #666;
+	/*将文字挤到右侧*/
+	padding-left:58px;
+	position: relative; 
+}
+.login_t a {
+	color: #666;
+}
+.login_t a:hover {
+	color: #f10512;
+}
+.login_t .person {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background:url(../images/sprite_userinfo@1x.png) no-repeat;
+	background-position:-70px 0;
+}
+.person img {
+	width: 40px;
+	height: 40px;
+	margin: 5px;
+	border-radius: 50%;
+}
+.login_b a {
+	border:2px solid #E01222;
+	width: 70px;
+	height: 20px;
+	display: block;
+	float: left;
+	text-align: center;
+	line-height: 20px;
+	color: #f10512;
+}
+.login_b a:last-child {
+	margin-left: 10px;
+}
+.login_b a:hover {
+	background-color: #f10512;
+	color: white;
+}
+/*新闻模块*/
+.grid_col3 .news{
+	height: 154px;
+	border-bottom: 1px solid #ccc;
+	padding: 6px 13px 0;
+	box-sizing: border-box;
+}
+.news .news_t{
+	height: 24px;
+	border-bottom: 1px solid #ccc;
+	font-size: 12px;
+	line-height: 24px;
+	position: relative;
+}
+.news_t a:first-child{
+	width: 38px;
+	display: inline-block;
+	border-right: 1px solid #ccc;
+}
+.news_t a:nth-child(2){
+	margin-left: 16px;
+	display: inline-block;
+}
+.news_t a:nth-child(3){
+	float: right;
+}
+.news_t div{
+	height: 2px;
+	width: 28px;
+	background-color: #f10512;
+	position: absolute;
+	bottom: 0;
+}
+.news .news_b{
+    font-size: 12px;
+    line-height: 25px;
+    color: #666;
+    margin-top: 18px;
+}
+/*服务扩展模块*/
+.grid_col3 .expand{
+	height: 210px;
+	overflow: hidden;
+}
+.expand li{
+	width: 46px;
+	height: 70px;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	float: left;
+	line-height: 70px;
+	text-align: center;
+	font-size: 12px;
+	color: #f10512;
+}
+.expand li:hover{
+	background-color: #f10512;
+	color: white;
+}
+.expand li:nth-child(4n){
+	border-right: 0;
+}
